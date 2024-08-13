@@ -25,9 +25,24 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/style.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/js/jquery-3.6.0.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/slick.js",
+              "src/assets/js/custom-slick.js",
+              "src/assets/js/counter.js",
+              "src/assets/js/popover.js",
+              "src/assets/js/feather.min.js",
+              "src/assets/js/emojionearea.min.js",
+              "src/assets/js/bootstrap.js",
+              "src/assets/js/chatbox.js",
+              "src/assets/js/lazysizes.min.js",
+              "src/assets/js/theme-setting.js",
+              "src/assets/js/script.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
