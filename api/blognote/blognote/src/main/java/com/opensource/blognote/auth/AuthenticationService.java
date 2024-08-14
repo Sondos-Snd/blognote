@@ -1,5 +1,6 @@
 package com.opensource.blognote.auth;
 
+import com.opensource.blognote.email.EmailService;
 import com.opensource.blognote.role.RoleRepository;
 import com.opensource.blognote.user.Token;
 import com.opensource.blognote.user.TokenRepository;
@@ -22,6 +23,7 @@ public class AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     private final TokenRepository tokenRepository;
+    private final EmailService emailService;
 
     public void register(RegistrationRequest request) {
         var userRole = roleRepository.findByName("USER")
