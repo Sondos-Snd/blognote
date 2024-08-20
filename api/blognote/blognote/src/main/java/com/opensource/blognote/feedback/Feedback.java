@@ -1,4 +1,4 @@
-package com.opensource.blognote.book;
+package com.opensource.blognote.feedback;
 
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedBy;
@@ -10,25 +10,15 @@ import java.time.LocalDateTime;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class Book {
-
+public class Feedback {
     @Id
     @GeneratedValue
     private Integer id;
 
-    private String title;
+    private Double note;
 
-    private String authorName;
+    private String comment;
 
-    private String isbn;
-
-    private String synopsis;
-
-    private String bookCover;
-
-    private boolean archived;
-
-    private boolean shareable;
     @CreatedDate
     @Column(nullable = false,updatable = false)
     private LocalDateTime createdDate;
@@ -41,4 +31,5 @@ public class Book {
     @LastModifiedDate
     @Column(nullable = false)
     private Integer lastModifiedBy;
+
 }
