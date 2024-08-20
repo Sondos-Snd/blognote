@@ -9,6 +9,7 @@ import com.opensource.blognote.user.TokenRepository;
 import com.opensource.blognote.user.User;
 import com.opensource.blognote.user.UserRepository;
 import jakarta.mail.MessagingException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -108,5 +109,23 @@ public class AuthenticationService {
         );
         return AuthenticationResponse.builder()
                 .token(jwtToken).build();
+    }
+
+    @Transactional
+    public void activateAccount(String token) throws MessagingException {
+        Token savedToken = tokenRepository.findByToken(token)
+                // todo define exception
+                .orElseThrow(() -> new RuntimeException("Invalis token"));
+        if (LocalDateTime.now().isAfter(savedToken.getExpiresAt())) {
+            sendValidationEmail(savedToken.getUser());
+            throw new RuntimeException("Activation token has expired, new token sent");
+        }
+        var user = userRepository.findById(savedToken.getUser().getId())
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        user.setEnabled(true);
+        userRepository.save(user);
+
+        savedToken.setValidatedAt(LocalDateTime.now());
+        tokenRepository.save(savedToken);
     }
 }
