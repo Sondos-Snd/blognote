@@ -3,8 +3,8 @@ services:
     container_name: postgres-sql-bn
     image: postgres
     environment:
-      POSTGRES_USER: username
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
       PGDATA: /var/lib/postgresql/data
       POTGRES_DB: blognote
     volumes:
