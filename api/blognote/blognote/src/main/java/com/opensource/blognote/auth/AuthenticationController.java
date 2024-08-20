@@ -22,6 +22,7 @@ public class AuthenticationController {
     public ResponseEntity<?> register(
             @RequestBody @Valid RegistrationRequest request
     ) throws MessagingException {
+        System.out.println("landed here first");
 
         service.register(request);
         return ResponseEntity.accepted().build();
@@ -30,6 +31,7 @@ public class AuthenticationController {
 
     @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody @Valid AuthenticationRequest authenticationRequest) {
+        System.out.println("landed here");
         return ResponseEntity.ok(service.authenticate(authenticationRequest));
     }
 

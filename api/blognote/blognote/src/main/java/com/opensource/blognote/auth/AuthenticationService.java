@@ -102,7 +102,7 @@ public class AuthenticationService {
                 )
         );
         var claims = new HashMap<String, Object>();
-        var user = ((User) auth.getPrincipal());
+        var user = ((User)auth.getPrincipal());
         claims.put("fullname",user.fullName());
         var jwtToken = jwtService.generateToken(
                 claims, user
@@ -111,11 +111,11 @@ public class AuthenticationService {
                 .token(jwtToken).build();
     }
 
-    @Transactional
+//    @Transactional
     public void activateAccount(String token) throws MessagingException {
         Token savedToken = tokenRepository.findByToken(token)
                 // todo define exception
-                .orElseThrow(() -> new RuntimeException("Invalis token"));
+                .orElseThrow(() -> new RuntimeException("Invalid token"));
         if (LocalDateTime.now().isAfter(savedToken.getExpiresAt())) {
             sendValidationEmail(savedToken.getUser());
             throw new RuntimeException("Activation token has expired, new token sent");

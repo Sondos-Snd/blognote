@@ -33,6 +33,7 @@ public class EmailService {
         String templateName;
         if (emailTemplate == null) {
             templateName = "confirm-email";
+            System.out.println("ended here");
         } else {
             templateName=emailTemplate.name();
         }
