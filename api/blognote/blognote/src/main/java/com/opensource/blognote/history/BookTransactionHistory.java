@@ -1,10 +1,10 @@
-package com.opensource.blognote.feedback;
+package com.opensource.blognote.history;
 
 import com.opensource.blognote.book.Book;
+import com.opensource.blognote.user.User;
 import common.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,15 +18,15 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Feedback extends BaseEntity {
-
-    private Double note;
-
-    private String comment;
-
+public class BookTransactionHistory extends BaseEntity {
+    // many to many relationship : user/book
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
     @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;
-
+    private boolean returned;
+    private boolean returnApproved;
 
 }
