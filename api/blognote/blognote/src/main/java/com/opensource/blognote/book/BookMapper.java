@@ -1,5 +1,6 @@
 package com.opensource.blognote.book;
 
+import com.opensource.blognote.history.BookTransactionHistory;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -28,4 +29,16 @@ public class BookMapper {
                 .shareable(book.isShareable())
                 .build();
     }
+
+    public BorrowedBookResponse toBorrowedBookResponse(BookTransactionHistory bookTransactionHistory) {
+        return BorrowedBookResponse.builder()
+                .id(bookTransactionHistory.getBook().getId())
+                .title(bookTransactionHistory.getBook().getTitle())
+                .authorName(bookTransactionHistory.getBook().getAuthorName())
+                .rate(bookTransactionHistory.getBook().getRate())
+                .returned(bookTransactionHistory.isReturned())
+                .returnApproved(bookTransactionHistory.isReturnApproved())
+                .build();
+    }
+
 }

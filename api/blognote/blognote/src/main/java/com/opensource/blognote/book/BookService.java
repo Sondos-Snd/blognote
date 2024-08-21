@@ -1,5 +1,7 @@
 package com.opensource.blognote.book;
 
+import com.opensource.blognote.history.BookTransactionHistory;
+import com.opensource.blognote.history.BookTransactionRepository;
 import com.opensource.blognote.user.User;
 import common.PageResponse;
 import jakarta.persistence.EntityNotFoundException;
@@ -19,6 +21,7 @@ public class BookService {
 
     private BookMapper bookMapper;
     private BookRepository bookRepository;
+    private BookTransactionRepository bookTransactionRepository;
 
     public Integer save(BookRequest request, Authentication connectedUser) {
         User user = (User) connectedUser.getPrincipal();
@@ -67,4 +70,23 @@ public class BookService {
                 books.isLast()
         );
     }
+
+    public PageResponse<BorrowedBookResponse> findAllBorrowedBooks(int page, int size, Authentication connectedUser) {
+        User user = (User) connectedUser.getPrincipal();
+        Pageable pageable= PageRequest.of(page, size, Sort.by("createdDate").descending());
+        Page<BookTransactionHistory> allBorrowedBooks = bookTransactionRepository.finAllByBorrowedBooks(pageable, user.getId());
+        List<BorrowedBookResponse> borrowedBookResponses = allBorrowedBooks.stream()
+                .map(bookMapper::toBorrowedBookResponse).toList();
+        return new PageResponse<>(
+                borrowedBookResponses,
+                allBorrowedBooks.getNumber(),
+                allBorrowedBooks.getSize(),
+                allBorrowedBooks.getTotalElements(),
+                allBorrowedBooks.getTotalPages(),
+                allBorrowedBooks.isFirst(),
+                allBorrowedBooks.isLast()
+        );
+    }
+
+
 }
