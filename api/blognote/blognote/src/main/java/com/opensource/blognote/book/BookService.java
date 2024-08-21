@@ -1,5 +1,6 @@
 package com.opensource.blognote.book;
 
+import com.opensource.blognote.exception.OperationNotPermittedException;
 import com.opensource.blognote.history.BookTransactionHistory;
 import com.opensource.blognote.history.BookTransactionRepository;
 import com.opensource.blognote.user.User;
@@ -13,7 +14,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -104,5 +107,20 @@ public class BookService {
                 allBorrowedBooks.isFirst(),
                 allBorrowedBooks.isLast()
         );
+    }
+
+    public Integer updateShareableStatus(Integer bookId, Authentication connectedUser) {
+        Book bookToUpdate = bookRepository.findById(bookId)
+                .orElseThrow(()->new EntityNotFoundException("Book not found with id: "+bookId));
+
+        User user = (User) connectedUser.getPrincipal();
+        // only owner can update
+        if(!Objects.equals(user.getId(),bookToUpdate.getOwner().getId())){
+            throw new OperationNotPermittedException("You cannnot update a book you can't own");
+        }
+        bookToUpdate.setShareable(!bookToUpdate.isShareable());
+        bookRepository.save(bookToUpdate);
+
+        return bookId;
     }
 }
