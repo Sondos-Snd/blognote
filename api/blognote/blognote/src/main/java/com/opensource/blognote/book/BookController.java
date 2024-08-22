@@ -94,12 +94,22 @@ public class BookController {
     }
 
     @PostMapping("/borrow/return/{book-id}")
-    public ResponseEntity<Integer> returnBook(
+    public ResponseEntity<Integer> returnBorrowedBook(
             @PathVariable("book-id") Integer bookId,
             Authentication connectedUser
     ) {
 
-        return ResponseEntity.ok(service.returnBook(bookId,connectedUser));
+        return ResponseEntity.ok(service.returnBorrowedBook(bookId,connectedUser));
+
+    }
+
+    @PostMapping("/borrow/return/approve/{book-id}")
+    public ResponseEntity<Integer> approveReturnBorrowedBook(
+            @PathVariable("book-id") Integer bookId,
+            Authentication connectedUser
+    ) {
+
+        return ResponseEntity.ok(service.approveReturnBorrowedBook(bookId,connectedUser));
 
     }
 }

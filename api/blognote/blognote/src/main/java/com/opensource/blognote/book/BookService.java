@@ -168,7 +168,7 @@ public class BookService {
         return bookTransactionRepository.save(bookTransaction).getId();
     }
 
-    public Integer returnBook(Integer bookId, Authentication connectedUser) {
+    public Integer returnBorrowedBook(Integer bookId, Authentication connectedUser) {
 
         // checks at book entity level
         Book bookToBorrow = bookRepository.findById(bookId)
@@ -188,6 +188,30 @@ public class BookService {
                 .orElseThrow(()->new EntityNotFoundException("Transaction not found for the book with id: " + bookId));
 
         bookToReturn.setReturned(true);
+
+        return bookTransactionRepository.save(bookToReturn).getId();
+    }
+
+    public Integer approveReturnBorrowedBook(Integer bookId, Authentication connectedUser) {
+
+        // checks at book entity level
+        Book bookToBorrow = bookRepository.findById(bookId)
+                .orElseThrow(()->new EntityNotFoundException("Book not found with id: "+bookId));
+
+        if (!bookToBorrow.isShareable() || bookToBorrow.isArchived()) {
+            throw new OperationNotPermittedException("You cannnot borrow the book with id: "+bookId);
+        }
+
+        User user = (User) connectedUser.getPrincipal();
+        if (Objects.equals(user.getId(), bookToBorrow.getOwner().getId())) {
+            throw new OperationNotPermittedException("You cannnot borrow / return or approve return for your own book");
+        }
+
+        // checks at book transaction level
+        BookTransactionHistory bookToReturn = bookTransactionRepository.findByBookIdAnOwnerid(bookId,user.getId())
+                .orElseThrow(()->new EntityNotFoundException("The book is not returned yet."));
+
+        bookToReturn.setReturnApproved(true);
 
         return bookTransactionRepository.save(bookToReturn).getId();
     }

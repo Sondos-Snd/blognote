@@ -37,9 +37,19 @@ public interface BookTransactionRepository extends JpaRepository<BookTransaction
             SELECT bookTransaction
             FROM BookTransactionHistory bookTransaction
             Where bookTransaction.book.id = :bookId
-            AND bookTransaction.book.user.id = :userId
+            AND bookTransaction.user.id = :userId
             AND bookTransaction.returned = false
             AND bookTransaction.returnApproved = false
             """)
     Optional<BookTransactionHistory> findByBookIdAnUserid(Integer bookId, Integer userId);
+
+    @Query("""
+            SELECT bookTransaction
+            FROM BookTransactionHistory bookTransaction
+            Where bookTransaction.book.id = :bookId
+            AND bookTransaction.book.owner.id = :userId
+            AND bookTransaction.returned = true
+            AND bookTransaction.returnApproved = false
+            """)
+    Optional<BookTransactionHistory> findByBookIdAnOwnerid(Integer bookId, Integer userId);
 }
