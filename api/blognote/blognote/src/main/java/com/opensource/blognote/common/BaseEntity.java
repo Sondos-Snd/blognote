@@ -1,4 +1,4 @@
-package common;
+package com.opensource.blognote.common;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

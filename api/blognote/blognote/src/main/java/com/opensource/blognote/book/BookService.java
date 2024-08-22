@@ -5,7 +5,7 @@ import com.opensource.blognote.file.FileStorageService;
 import com.opensource.blognote.history.BookTransactionHistory;
 import com.opensource.blognote.history.BookTransactionRepository;
 import com.opensource.blognote.user.User;
-import common.PageResponse;
+import com.opensource.blognote.common.PageResponse;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

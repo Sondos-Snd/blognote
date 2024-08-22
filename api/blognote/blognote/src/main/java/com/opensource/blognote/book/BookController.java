@@ -1,6 +1,6 @@
 package com.opensource.blognote.book;
 
-import common.PageResponse;
+import com.opensource.blognote.common.PageResponse;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

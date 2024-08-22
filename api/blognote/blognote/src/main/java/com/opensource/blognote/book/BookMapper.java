@@ -1,6 +1,7 @@
 package com.opensource.blognote.book;
 
 import com.opensource.blognote.history.BookTransactionHistory;
+import com.opensource.blognote.file.FileUtils;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -23,7 +24,7 @@ public class BookMapper {
                 .authorName(book.getAuthorName())
                 .synopsis(book.getSynopsis())
                 .owner(book.getOwner().fullName())
-//                .cover()
+                .cover(FileUtils.readFileFromLocation(book.getBookCover()))
                 .rate(book.getRate())
                 .archived(book.isArchived())
                 .shareable(book.isShareable())

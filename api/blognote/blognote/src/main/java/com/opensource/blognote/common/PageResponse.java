@@ -1,4 +1,4 @@
-package common;
+package com.opensource.blognote.common;
 
 import lombok.*;
 

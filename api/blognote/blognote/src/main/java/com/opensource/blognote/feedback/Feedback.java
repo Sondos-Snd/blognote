@@ -1,10 +1,9 @@
 package com.opensource.blognote.feedback;
 
 import com.opensource.blognote.book.Book;
-import common.BaseEntity;
+import com.opensource.blognote.common.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

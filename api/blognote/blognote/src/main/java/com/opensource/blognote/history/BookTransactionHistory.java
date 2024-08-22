@@ -2,7 +2,7 @@ package com.opensource.blognote.history;
 
 import com.opensource.blognote.book.Book;
 import com.opensource.blognote.user.User;
-import common.BaseEntity;
+import com.opensource.blognote.common.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
