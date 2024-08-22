@@ -12,24 +12,17 @@ public interface BookTransactionRepository extends JpaRepository<BookTransaction
 
     @Query("""
             SELECT bookTransaction
-            FROM BookTransactionHistory
+            FROM BookTransactionHistory bookTransaction
             Where bookTransaction.user.id = :userId  
             """)
     Page<BookTransactionHistory> finAllByBorrowedBooks(Pageable pageable, Integer userId);
 
     @Query("""
             SELECT bookTransaction
-            FROM BookTransactionHistory
+            FROM BookTransactionHistory bookTransaction
             Where bookTransaction.book.owner.id = :userId
             """)
     Page<BookTransactionHistory> finAllByReturnedBooks(Pageable pageable, Integer userId);
-
-    @Query("""
-            SELECT bookTransaction
-            FROM BookTransactionHistory
-            Where bookTransaction.book.id = :bookId
-            """)
-    Optional<BookTransactionHistory> findByBookId(Integer bookId);
 
     @Query("""
             SELECT COUNT(*) > 0 AS isBorrowed
@@ -39,4 +32,14 @@ public interface BookTransactionRepository extends JpaRepository<BookTransaction
             AND bt.returnApproved = true
             """)
     boolean isAlreadyBorrowedByUser(Integer bookId, Integer id);
+
+    @Query("""
+            SELECT bookTransaction
+            FROM BookTransactionHistory bookTransaction
+            Where bookTransaction.book.id = :bookId
+            AND bookTransaction.book.user.id = :userId
+            AND bookTransaction.returned = false
+            AND bookTransaction.returnApproved = false
+            """)
+    Optional<BookTransactionHistory> findByBookIdAnUserid(Integer bookId, Integer userId);
 }
