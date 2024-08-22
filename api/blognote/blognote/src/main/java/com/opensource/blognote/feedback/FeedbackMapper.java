@@ -1,8 +1,9 @@
 package com.opensource.blognote.feedback;
 
 import com.opensource.blognote.book.Book;
-import com.opensource.blognote.book.BookRequest;
 import org.springframework.stereotype.Service;
+
+import java.util.Objects;
 
 @Service
 public class FeedbackMapper {
@@ -17,4 +18,11 @@ public class FeedbackMapper {
                 .build();
     }
 
+    public FeedbackResponse toFeedbackResponse(Feedback feedback, Integer userId) {
+        return FeedbackResponse.builder()
+                .note(feedback.getNote())
+                .comment(feedback.getComment())
+                .ownFeedback(Objects.equals(feedback.getCreatedBy(),userId))
+                .build();
+    }
 }
