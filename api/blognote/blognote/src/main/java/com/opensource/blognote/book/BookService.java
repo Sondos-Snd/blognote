@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -124,7 +125,7 @@ public class BookService {
         return bookId;
     }
 
-    public Integer archiveBook(Integer bookId, Authentication connectedUser) {
+    public Integer updateArchiveStatus(Integer bookId, Authentication connectedUser) {
         Book bookToArchive = bookRepository.findById(bookId)
                 .orElseThrow(()->new EntityNotFoundException("Book not found with id: "+bookId));
 
@@ -137,5 +138,33 @@ public class BookService {
         bookRepository.save(bookToArchive);
 
         return bookId;
+    }
+
+    public Integer borrowBook(Integer bookId, Authentication connectedUser) {
+        Book bookToBorrow = bookRepository.findById(bookId)
+                .orElseThrow(()->new EntityNotFoundException("Book not found with id: "+bookId));
+
+        if (!bookToBorrow.isShareable() || bookToBorrow.isArchived()) {
+            throw new OperationNotPermittedException("You cannnot borrow the book with id: "+bookId);
+        }
+        User user = (User) connectedUser.getPrincipal();
+        if (Objects.equals(user.getId(), bookToBorrow.getOwner().getId())) {
+            throw new OperationNotPermittedException("You cannnot borrow your own book");
+        }
+
+        final boolean isAlreadyBorrowed = bookTransactionRepository.isAlreadyBorrowedByUser(bookId,user.getId());
+
+        if (isAlreadyBorrowed) {
+            throw new OperationNotPermittedException("Already borrowed book");
+        }
+
+        BookTransactionHistory bookTransaction= BookTransactionHistory.builder()
+                .book(bookToBorrow)
+                .user(user)
+                .returned(false)
+                .returnApproved(false)
+                .build();
+
+        return bookTransactionRepository.save(bookTransaction).getId();
     }
 }
