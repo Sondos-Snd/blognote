@@ -2,7 +2,6 @@ package com.opensource.blognote.feedback;
 
 import com.opensource.blognote.book.Book;
 import com.opensource.blognote.book.BookRepository;
-import com.opensource.blognote.book.BookResponse;
 import com.opensource.blognote.common.PageResponse;
 import com.opensource.blognote.exception.OperationNotPermittedException;
 import com.opensource.blognote.user.User;
