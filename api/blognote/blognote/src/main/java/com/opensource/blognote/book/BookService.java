@@ -116,10 +116,25 @@ public class BookService {
         User user = (User) connectedUser.getPrincipal();
         // only owner can update
         if(!Objects.equals(user.getId(),bookToUpdate.getOwner().getId())){
-            throw new OperationNotPermittedException("You cannnot update a book you can't own");
+            throw new OperationNotPermittedException("You cannnot update a book you don't own");
         }
         bookToUpdate.setShareable(!bookToUpdate.isShareable());
         bookRepository.save(bookToUpdate);
+
+        return bookId;
+    }
+
+    public Integer archiveBook(Integer bookId, Authentication connectedUser) {
+        Book bookToArchive = bookRepository.findById(bookId)
+                .orElseThrow(()->new EntityNotFoundException("Book not found with id: "+bookId));
+
+        User user = (User) connectedUser.getPrincipal();
+        // only owner can archive
+        if(!Objects.equals(user.getId(),bookToArchive.getOwner().getId())){
+            throw new OperationNotPermittedException("You cannnot archive a book you don't own");
+        }
+        bookToArchive.setArchived(!bookToArchive.isArchived());
+        bookRepository.save(bookToArchive);
 
         return bookId;
     }
