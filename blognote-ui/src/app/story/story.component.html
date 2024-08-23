@@ -1,0 +1,398 @@
+<!-- <div class="modal fade" id="addStory" aria-labelledby="addStory" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="create-post">
+                    <div class="static-section">
+                        <div class="card-title">
+                            <h3>create post</h3>
+                            <ul class="create-option">
+                                <li class="options">
+                                    <div class="setting-dropdown">
+                                        <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                                            <h5 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                public <i class="iw-14" data-feather="chevron-down"></i></h5>
+                                            <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                                <ul>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="globe"></i>public</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="users"></i>friends</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="user"></i>friends
+                                                            except</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="user"></i>specific
+                                                            friends</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="lock"></i>only me</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h5><i class="iw-15" data-feather="video"></i>go live</h5>
+                                </li>
+                            </ul>
+                            <div class="settings">
+                                <div class="setting-btn ms-2 setting-dropdown no-bg">
+                                    <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                                        <div role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="icon icon-font-color iw-14" data-feather="more-horizontal"></i>
+                                        </div>
+                                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                            <ul>
+                                                <li>
+                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                            data-feather="edit"></i>edit profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                            data-feather="user"></i>view profile</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-input input-style icon-right">
+                            <input type="text" class="form-control enable" placeholder="write something here..">
+                            <a href="#">
+                                <img src="/assets/images/icon/translate.png" class="img-fluid blur-up lazyload icon"
+                                    alt="translate">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="create-bg">
+                        <div class="bg-post" id="bg-post1">
+                            <div class="input-sec">
+                                <input type="text" class="form-control enable" placeholder="write something here.." />
+                                <div class="close-icon">
+                                    <a href="javascript:void(0)">
+                                        <i class="iw-20 ih-20" data-feather="x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="gradient-bg">
+                            <li onclick="clickGradient( 'gr-1')" class="gr-1"></li>
+                            <li onclick="clickGradient( 'gr-2')" class="gr-2"></li>
+                            <li onclick="clickGradient( 'gr-3')" class="gr-3"></li>
+                            <li onclick="clickGradient( 'gr-4')" class="gr-4"></li>
+                            <li onclick="clickGradient( 'gr-5')" class="gr-5"></li>
+                            <li onclick="clickGradient( 'gr-6')" class="gr-6"></li>
+                            <li onclick="clickGradient( 'gr-7')" class="gr-7"></li>
+                            <li onclick="clickGradient( 'gr-8')" class="gr-8"></li>
+                            <li onclick="clickGradient( 'gr-9')" class="gr-9"></li>
+                            <li onclick="clickGradient( 'gr-10')" class="gr-10"></li>
+                            <li onclick="clickGradient( 'gr-11')" class="gr-11"></li>
+                            <li onclick="clickGradient( 'gr-12')" class="gr-12"></li>
+                            <li onclick="clickGradient( 'gr-13')" class="gr-13"></li>
+                            <li onclick="clickGradient( 'gr-14')" class="gr-14"></li>
+                            <li onclick="clickGradient( 'gr-15')" class="gr-15"></li>
+                        </ul>
+                    </div>
+                    <ul class="create-btm-option">
+                        <li>
+                            <input class="choose-file" type="file">
+                            <h5><i class="iw-14" data-feather="camera"></i>album</h5>
+                        </li>
+                        <li>
+                            <h5><i class="iw-15" data-feather="smile"></i>feelings & acitivity</h5>
+                        </li>
+                        <li>
+                            <h5><i class="iw-15" data-feather="map-pin"></i>check in</h5>
+                        </li>
+                        <li>
+                            <h5><i class="iw-15" data-feather="tag"></i>tag friends</h5>
+                        </li>
+                    </ul>
+                    <div id="post-btn1" class="post-btn">
+                        <button disabled="disabled" class="Disable">post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div class="story-section ratio_115">
+    <div class="slide-8 no-arrow default-space">
+        <div>
+            <div class="story-box add-box">
+                <div>
+                    <img src="/assets/images/story-bg.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                    <div class="add-icon">
+                        <div class="icon">
+                            <img src="/assets/images/icon/plus.png" class="img-fluid blur-up lazyload" alt="plus">
+                        </div>
+                        <h6>add stories</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="story-box" data-bs-toggle="modal" data-bs-target="#storyModel">
+                <div class="adaptive-overlay orange-overlay"></div>
+                <div class="story-bg">
+                    <img src="/assets/images/story/6.jpg" class="img-fluid bg-img" data-adaptive-background='1' alt="">
+                </div>
+                <div class="story-content">
+                    <h6>Anna Mull</h6>
+                    <span>active now</span>
+                </div>
+                <div class="story-setting setting-dropdown">
+                    <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-light iw-13 ih-13" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="volume-x"></i>mute
+                                        josephin</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>view
+                                        profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="story-box" data-bs-toggle="modal" data-bs-target="#storyModel">
+                <div class="adaptive-overlay pink-overlay"></div>
+                <div class="story-bg">
+                    <img src="/assets/images/story/2.jpg" class="img-fluid bg-img" data-adaptive-background='1' alt="">
+                </div>
+                <div class="story-content">
+                    <h6>josephin water</h6>
+                    <span>active now</span>
+                </div>
+                <div class="story-setting setting-dropdown">
+                    <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-light iw-13 ih-13" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="volume-x"></i>mute
+                                        josephin</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>view
+                                        profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="story-box" data-bs-toggle="modal" data-bs-target="#storyModel">
+                <div class="adaptive-overlay skin-overlay"></div>
+                <div class="story-bg">
+                    <img src="/assets/images/story/1.jpg" class="img-fluid bg-img" data-adaptive-background='1' alt="">
+                </div>
+                <div class="story-content">
+                    <h6>josephin water</h6>
+                    <span>active now</span>
+                </div>
+                <div class="story-setting setting-dropdown">
+                    <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-light iw-13 ih-13" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="volume-x"></i>mute
+                                        josephin</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>view
+                                        profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="story-box" data-bs-toggle="modal" data-bs-target="#storyModel">
+                <div class="adaptive-overlay yellow-overlay"></div>
+                <div class="story-bg">
+                    <img src="/assets/images/story/3.jpg" class="img-fluid bg-img" data-adaptive-background='1' alt="">
+                </div>
+                <div class="story-content">
+                    <h6>Petey Cruiser</h6>
+                    <span>active now</span>
+                </div>
+                <div class="story-setting setting-dropdown">
+                    <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-light iw-13 ih-13" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="volume-x"></i>mute
+                                        josephin</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>view
+                                        profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="story-box" data-bs-toggle="modal" data-bs-target="#storyModel">
+                <div class="adaptive-overlay skin-overlay"></div>
+                <div class="story-bg">
+                    <img src="/assets/images/story/5.jpg" class="img-fluid bg-img" data-adaptive-background='1' alt="">
+                </div>
+                <div class="story-content">
+                    <h6>Paul Molive</h6>
+                    <span>active now</span>
+                </div>
+                <div class="story-setting setting-dropdown">
+                    <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-light iw-13 ih-13" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="volume-x"></i>mute
+                                        josephin</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>view
+                                        profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="story-box" data-bs-toggle="modal" data-bs-target="#storyModel">
+                <div class="adaptive-overlay pink-overlay"></div>
+                <div class="story-bg">
+                    <img src="/assets/images/story/4.jpg" class="img-fluid bg-img" data-adaptive-background='1' alt="">
+                </div>
+                <div class="story-content">
+                    <h6>Anna Sthesia</h6>
+                    <span>active now</span>
+                </div>
+                <div class="story-setting setting-dropdown">
+                    <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-light iw-13 ih-13" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="volume-x"></i>mute
+                                        josephin</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>view
+                                        profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="story-box" data-bs-toggle="modal" data-bs-target="#storyModel">
+                <div class="adaptive-overlay blue-overlay"></div>
+                <div class="story-bg">
+                    <img src="/assets/images/story/7.jpg" class="img-fluid bg-img" data-adaptive-background='1' alt="">
+                </div>
+                <div class="story-content">
+                    <h6>Paige Turner</h6>
+                    <span>active now</span>
+                </div>
+                <div class="story-setting setting-dropdown">
+                    <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-light iw-13 ih-13" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="volume-x"></i>mute
+                                        josephin</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>view
+                                        profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="story-box" data-bs-toggle="modal" data-bs-target="#storyModel">
+                <div class="adaptive-overlay"></div>
+                <div class="story-bg">
+                    <img src="/assets/images/story/8.jpg" class="img-fluid bg-img" data-adaptive-background='1' alt="">
+                </div>
+                <div class="story-content">
+                    <h6>Bob Frapples</h6>
+                    <span>active now</span>
+                </div>
+                <div class="story-setting setting-dropdown">
+                    <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-light iw-13 ih-13" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="volume-x"></i>mute
+                                        josephin</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>view
+                                        profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

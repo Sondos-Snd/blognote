@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BlogNote">
+  <meta name="keywords" content="BlogNote">
+  <meta name="author" content="BlogNote">
+  <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+  <title>BlogNote</title>
+
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <!-- loader start -->
+  <app-pre-loader></app-pre-loader>
+  <!-- loader end -->
+
+
+  <!-- header start -->
+  <app-header></app-header>
+  <!-- header end -->
+
+
+  <!-- page body start -->
+  <div class="page-body container-fluid custom-padding">
+
+    <!-- sidebar panel start -->
+    <app-sidebar></app-sidebar>
+    <!-- sidebar panel end -->
+
+
+    <div class="page-center">
+
+      <!-- stroy section start -->
+      <app-story></app-story>
+      <!-- stroy section end -->
+
+      <div class="container-fluid section-t-space px-0 layout-default">
+        <div class="page-content">
+          <div class="content-left">
+            <!-- profile box -->
+            <app-user-profile></app-user-profile>
+            <!-- suggestion box -->
+            <app-friend-suggestion></app-friend-suggestion>
+            <div class="sticky-top">
+              <!-- like page -->
+              <div class="page-list section-t-space">
+                <div class="card-title">
+                  <h3>liked pages</h3>
+                  <h5>18 pages</h5>
+                  <div class="settings">
+                    <div class="setting-btn">
+                      <a href="#" class="d-flex">
+                        <i class="icon icon-dark stroke-width-3 iw-11 ih-11" data-feather="rotate-cw"></i>
+                      </a>
+                    </div>
+                    <div class="setting-btn ms-2 setting-dropdown">
+                      <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="icon-dark stroke-width-3 icon iw-11 ih-11" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                          <ul>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="edit"></i>see all</a>
+                            </li>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="search"></i>find
+                                page</a>
+                            </li>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="settings"></i>settings</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-content">
+                  <ul>
+                    <li>
+                      <div class="media">
+                        <div class="img-part">
+                          <img src="/assets/images/pages-logo/1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                        </div>
+                        <div class="media-body">
+                          <h4>chrimson agency</h4>
+                          <h6>clothing store
+                            <span><i data-feather="user" class="icon-font-color iw-13 ih-13"></i>15k</span>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="favourite-btn active">
+                        <i data-feather="star" class="icon-dark iw-14 ih-14"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="img-part">
+                          <img src="/assets/images/pages-logo/2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                        </div>
+                        <div class="media-body">
+                          <h4>Digital Pixel</h4>
+                          <h6>software company
+                            <span><i data-feather="user" class="icon-font-color iw-13 ih-13"></i>158k</span>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="favourite-btn">
+                        <i data-feather="star" class="icon-dark iw-14 ih-14"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="img-part">
+                          <img src="/assets/images/pages-logo/3.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                        </div>
+                        <div class="media-body">
+                          <h4>the angle bar</h4>
+                          <h6>disco bar
+                            <span><i data-feather="user" class="icon-font-color iw-13 ih-13"></i>8k</span>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="favourite-btn active">
+                        <i data-feather="star" class="icon-dark iw-14 ih-14"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="img-part">
+                          <img src="/assets/images/pages-logo/4.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                        </div>
+                        <div class="media-body">
+                          <h4>fivestar food</h4>
+                          <h6>restaurant
+                            <span><i data-feather="user" class="icon-font-color iw-13 ih-13"></i>186k</span>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="favourite-btn">
+                        <i data-feather="star" class="icon-dark iw-14 ih-14"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="img-part">
+                          <img src="/assets/images/pages-logo/5.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                        </div>
+                        <div class="media-body">
+                          <h4>royal watch</h4>
+                          <h6>watch shop
+                            <span><i data-feather="user" class="icon-font-color iw-13 ih-13"></i>65k</span>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="favourite-btn">
+                        <i data-feather="star" class="icon-dark iw-14 ih-14"></i>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- weather section -->
+              <div class="weather-section section-t-space">
+                <div class="card-title light-version">
+                  <h3>weather</h3>
+                  <div class="settings">
+                    <div class="setting-btn light-btn">
+                      <a href="#" class="d-flex">
+                        <i class="icon icon-light stroke-width-3 iw-11 ih-11" data-feather="rotate-cw"></i>
+                      </a>
+                    </div>
+                    <div class="setting-btn light-btn ms-2 setting-dropdown">
+                      <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a class="d-flex" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="icon-light stroke-width-3 iw-12 ih-12" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                          <ul>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="edit"></i>change
+                                city</a>
+                            </li>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="settings"></i>setting</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="weather-content">
+                  <div class="top-title">
+                    <h2>28°C</h2>
+                    <h5>4.45 pm</h5>
+                  </div>
+                  <h5>sunny day</h5>
+                  <h6>21 march 2021 (monday) <span>denmark</span></h6>
+                </div>
+                <div class="flaks-img">
+                  <img src="/assets/images/icon/snow-flaks.png" class="img-fluid blur-up lazyload" alt="snow">
+                </div>
+                <div class="snowflakes" aria-hidden="true">
+                  <div class="snowflake">
+                    ❅
+                  </div>
+                  <div class="snowflake">
+                    ❆
+                  </div>
+                  <div class="snowflake">
+                    ❅
+                  </div>
+                  <div class="snowflake">
+                    ❆
+                  </div>
+                  <div class="snowflake">
+                    ❅
+                  </div>
+                  <div class="snowflake">
+                    ❆
+                  </div>
+                  <div class="snowflake">
+                    ❅
+                  </div>
+                  <div class="snowflake">
+                    ❆
+                  </div>
+                  <div class="snowflake">
+                    ❅
+                  </div>
+                  <div class="snowflake">
+                    ❆
+                  </div>
+                  <div class="snowflake">
+                    ❅
+                  </div>
+                  <div class="snowflake">
+                    ❆
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <app-create-post></app-create-post>
+          <div class="content-right">
+            <!-- birthday reminder -->
+            <app-birthday-reminder></app-birthday-reminder>
+
+            <!-- gallery section -->
+            <div class="gallery-section section-t-space">
+              <div class="gallery-top">
+                <div class="card-title">
+                  <h3>gallery</h3>
+                  <h5>156 photos</h5>
+                  <div class="settings">
+                    <div class="setting-btn">
+                      <a href="#">
+                        <i class="icon icon-dark stroke-width-3 iw-11 ih-11" data-feather="rotate-cw"></i>
+                      </a>
+                    </div>
+                    <div class="setting-btn ms-2 setting-dropdown">
+                      <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="icon-dark stroke-width-3 icon iw-11 ih-11" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                          <ul>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="edit"></i>edit
+                                profile</a>
+                            </li>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>view
+                                profile</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-section ratio_square">
+                <div class="container-fluid p-0">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="overlay">
+                        <div class="portfolio-image">
+                          <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#imageModel">
+                            <img src="/assets/images/story/1.jpg" alt="" class="img-fluid blur-up lazyload bg-img">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="overlay">
+                        <div class="portfolio-image">
+                          <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#imageModel">
+                            <img src="/assets/images/story/2.jpg" alt="" class="img-fluid blur-up lazyload bg-img">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="overlay">
+                        <div class="portfolio-image">
+                          <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#imageModel">
+                            <img src="/assets/images/story/3.jpg" alt="" class="img-fluid blur-up lazyload bg-img">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 row m-0">
+                      <div class="col-12 pt-cls p-0">
+                        <div class="overlay">
+                          <div class="portfolio-image">
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#imageModel">
+                              <img src="/assets/images/story/4.jpg" alt="" class="img-fluid blur-up lazyload bg-img">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 pt-cls p-0">
+                        <div class="overlay">
+                          <div class="portfolio-image">
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#imageModel">
+                              <img src="/assets/images/story/6.jpg" alt="" class="img-fluid blur-up lazyload bg-img">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-8 pt-cls">
+                      <div class="overlay">
+                        <div class="portfolio-image">
+                          <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#imageModel">
+                            <img src="/assets/images/story/5.jpg" alt="" class="img-fluid blur-up lazyload bg-img">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sticky-top">
+              <!-- event -->
+              <app-notification></app-notification>
+
+              <!-- suggestion box -->
+              <div class="suggestion-box section-t-space">
+                <div class="card-title">
+                  <h3>your games</h3>
+                  <h5>24 games</h5>
+                  <div class="settings">
+                    <div class="setting-btn">
+                      <a href="#" class="d-flex">
+                        <i class="icon icon-dark stroke-width-3 iw-11 ih-11" data-feather="rotate-cw"></i>
+                      </a>
+                    </div>
+                    <div class="setting-btn setting-dropdown ms-2">
+                      <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="icon-dark stroke-width-3 icon iw-11 ih-11" data-feather="sun"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                          <ul>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>see all</a>
+                            </li>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="search"></i>find
+                                friends</a>
+                            </li>
+                            <li>
+                              <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="settings"></i>settings</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="suggestion-content ratio_115">
+                  <div class="slide-2 no-arrow default-space">
+                    <div>
+                      <div class="story-box">
+                        <div class="adaptive-overlay"></div>
+                        <div class="story-bg">
+                          <img src="/assets/images/game/1.jpg" class="img-fluid bg-img" data-adaptive-background='1'
+                            alt="">
+                        </div>
+                        <div class="story-content">
+                          <h6>josephin water</h6>
+                          <span class="player"><i class="icon-light iw-10 ih-10" data-feather="user"></i>15k</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="story-box">
+                        <div class="adaptive-overlay"></div>
+                        <div class="story-bg">
+                          <img src="/assets/images/game/2.jpg" class="img-fluid bg-img" data-adaptive-background='1'
+                            alt="">
+                        </div>
+                        <div class="story-content">
+                          <h6>josephin water</h6>
+                          <span class="player"><i class="icon-light iw-10 ih-10" data-feather="user"></i>30k</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="story-box">
+                        <div class="adaptive-overlay"></div>
+                        <div class="story-bg">
+                          <img src="/assets/images/game/3.jpg" class="img-fluid bg-img" data-adaptive-background='1'
+                            alt="">
+                        </div>
+                        <div class="story-content">
+                          <h6>josephin water</h6>
+                          <span class="player"> <img src="/assets/images/icon/user-w.png"
+                              class="img-fluid blur-up lazyload" alt="">25k</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- conversation panel start -->
+    <app-friends-list></app-friends-list>
+    <!-- conversation panel end -->
+
+  </div>
+  <!-- page body end -->
+
+
+  <!-- story model start -->
+  <div class="modal story-model" id="storyModel" tabindex="-1" role="dialog" aria-labelledby="storyModel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="story-bg">
+            <div class="container-fluid p-0">
+              <div class="row m-0">
+                <div class="left-box col-xl-3 col-lg-4">
+                  <div class="model-title">
+                    <div class="title-main">
+                      <h2>stories</h2>
+                    </div>
+                    <div class="title-setting">
+                      <ul>
+                        <li><a href="#">archive</a></li>
+                        <li><a href="#">settings</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="modal-flex">
+                    <div class="add-story">
+                      <h4 class="story-title">your story</h4>
+                      <div class="media list-media">
+                        <div class="story-img" data-bs-toggle="modal" data-bs-target="#addStory">
+                          <div class="user-img">
+                            <img src="/assets/images/story-bg.jpg" class="img-fluid blur-up lazyload bg-img" alt="user">
+                          </div>
+                          <div class="add-icon">
+                            <div class="icon">
+                              <img src="/assets/images/icon/plus.png" class="img-fluid blur-up lazyload" alt="plus">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="media-body">
+                          <h5>add story</h5>
+                          <h6>share your photos or video</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="friend-story">
+                      <h4 class="story-title">all stories</h4>
+                      <div class="slider-nav">
+                        <div>
+                          <div class="media list-media">
+                            <div class="story-img seen">
+                              <div class="user-img">
+                                <img src="/assets/images/user-sm/1.jpg" class="img-fluid blur-up lazyload bg-img"
+                                  alt="user">
+                              </div>
+                            </div>
+                            <div class="media-body">
+                              <h5>Petey Cruiser</h5>
+                              <h6>2 hours ago</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="media list-media">
+                            <div class="story-img seen">
+                              <div class="user-img">
+                                <img src="/assets/images/user-sm/2.jpg" class="img-fluid blur-up lazyload bg-img"
+                                  alt="user">
+                              </div>
+                            </div>
+                            <div class="media-body">
+                              <h5>Anna Sthesia</h5>
+                              <h6>3 hours ago</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="media list-media">
+                            <div class="story-img">
+                              <div class="user-img">
+                                <img src="/assets/images/user-sm/3.jpg" class="img-fluid blur-up lazyload bg-img"
+                                  alt="user">
+                              </div>
+                            </div>
+                            <div class="media-body">
+                              <h5>Paul Molive</h5>
+                              <h6>5 hours ago</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="media list-media">
+                            <div class="story-img">
+                              <div class="user-img">
+                                <img src="/assets/images/user-sm/4.jpg" class="img-fluid blur-up lazyload bg-img"
+                                  alt="user">
+                              </div>
+                            </div>
+                            <div class="media-body">
+                              <h5>Anna Mull</h5>
+                              <h6>5 hours ago</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="media list-media">
+                            <div class="story-img">
+                              <div class="user-img">
+                                <img src="/assets/images/user-sm/5.jpg" class="img-fluid blur-up lazyload bg-img"
+                                  alt="user">
+                              </div>
+                            </div>
+                            <div class="media-body">
+                              <h5>Paige Turner</h5>
+                              <h6>5 hours ago</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="media list-media">
+                            <div class="story-img">
+                              <div class="user-img">
+                                <img src="/assets/images/user-sm/6.jpg" class="img-fluid blur-up lazyload bg-img"
+                                  alt="user">
+                              </div>
+                            </div>
+                            <div class="media-body">
+                              <h5>Bob Frapples</h5>
+                              <h6>5 hours ago</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="right-box col-xl-9 col-lg-8 p-0">
+                  <a href="#" data-bs-dismiss="modal"><i data-feather="x" class="icon-light close"></i></a>
+                  <div class="sliderContainer">
+                    <div class="slider single-item">
+                      <div>
+                        <div class="story-image"><img src="/assets/images/post/1.jpg" class="img-fluid blur-up lazyload"
+                            alt=""></div>
+                      </div>
+                      <div>
+                        <div class="story-image"><img src="/assets/images/post/2.jpg" class="img-fluid blur-up lazyload"
+                            alt=""></div>
+                      </div>
+                      <div>
+                        <div class="story-image"><img src="/assets/images/post/3.jpg" class="img-fluid blur-up lazyload"
+                            alt=""></div>
+                      </div>
+                      <div>
+                        <div class="story-image"><img src="/assets/images/post/4.jpg" class="img-fluid blur-up lazyload"
+                            alt=""></div>
+                      </div>
+                      <div>
+                        <div class="story-image"><img src="/assets/images/post/5.jpg" class="img-fluid blur-up lazyload"
+                            alt=""></div>
+                      </div>
+                      <div>
+                        <div class="story-image"><img src="/assets/images/post/6.jpg" class="img-fluid blur-up lazyload"
+                            alt=""></div>
+                      </div>
+                    </div>
+                    <div class="progressBarContainer">
+                      <div class="item">
+                        <span data-slick-index="0" class="progressBar"></span>
+                      </div>
+                      <div class="item">
+                        <span data-slick-index="1" class="progressBar"></span>
+                      </div>
+                      <div class="item">
+                        <span data-slick-index="2" class="progressBar"></span>
+                      </div>
+                      <div class="item">
+                        <span data-slick-index="3" class="progressBar"></span>
+                      </div>
+                      <div class="item">
+                        <span data-slick-index="4" class="progressBar"></span>
+                      </div>
+                      <div class="item">
+                        <span data-slick-index="5" class="progressBar"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reply-section">
+                    <div class="reply-form">
+                      <input class="form-control" placeholder="reply...">
+                    </div>
+                    <ul class="emoji icon-xl">
+                      <li><img src="/assets/svg/emoji/040.svg" class="img-fluid blur-up lazyload" alt="smile">
+                      </li>
+                      <li><img src="/assets/svg/emoji/113.svg" class="img-fluid blur-up lazyload" alt="smile">
+                      </li>
+                      <li><img src="/assets/svg/emoji/027.svg" class="img-fluid blur-up lazyload" alt="smile">
+                      </li>
+                      <li><img src="/assets/svg/emoji/052.svg" class="img-fluid blur-up lazyload" alt="smile">
+                      </li>
+                      <li><img src="/assets/svg/emoji/039.svg" class="img-fluid blur-up lazyload" alt="smile">
+                      </li>
+                      <li><img src="/assets/svg/emoji/042.svg" class="img-fluid blur-up lazyload" alt="smile">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- story model end -->
+  <!-- video player model start -->
+  <div class="modal fade bd-example-modal-lg" id="videoPlayer" aria-labelledby="videoPlayer" tabindex="-1" role="dialog"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body video-model">
+          <iframe class="video" src="https://www.youtube.com/embed/TKnufs85hXk"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- video player model end -->
+  <!-- gallery image model -->
+  <app-gallery></app-gallery>
+  <!-- share post model start -->
+  <app-footer></app-footer>
+  <!-- share post model end -->
+  <!-- add post/story model start -->
+  <!-- <app-story></app-story> -->
+  <!-- add post/story model end -->
+
+  <!-- theme setting -->
+  <app-settings-toggle></app-settings-toggle>
+  <!-- theme setting -->
+
+
+
+  <script>
+    feather.replace();
+    $(".emojiPicker").emojioneArea({
+      inline: true,
+      placement: 'absleft',
+      pickerPosition: "top left",
+    });
+  </script>
+
+</body>
+
+</html>
